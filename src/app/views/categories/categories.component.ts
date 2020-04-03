@@ -19,8 +19,8 @@ export class CategoriesComponent implements OnInit {
     this.dataHandler.categorySubject.subscribe(value => this.categories = value);
   }
 
-  showTasksByCategory(category: Category) {
+  showExercisesByCategory(category: Category) {
     this.activeCategory = category;
-    this.dataHandler.fillTasksByCategory(category);
+    this.dataHandler.fillExercisesByCategory(category);
   }
 }

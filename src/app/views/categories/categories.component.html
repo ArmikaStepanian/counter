@@ -10,7 +10,7 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item pointer"
-          *ngFor="let category of categories" (click)="showTasksByCategory(category)"
+          *ngFor="let category of categories" (click)="showExercisesByCategory(category)"
           [class.active]="activeCategory === category">
         <a class="nav-link">
           <p>{{category.title}}</p>
