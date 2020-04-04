@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Exercise} from '../../model/Exercise';
-import {DataHandlerService} from '../../service/data-handler.service';
+import {ExerciseHandlerService} from '../../service/exercise-handler.service';
 
 @Component({
   selector: 'app-exercises',
@@ -11,10 +11,10 @@ export class ExercisesComponent implements OnInit {
 
   exercises: Exercise[];
 
-  constructor(private dataHandler: DataHandlerService) {
+  constructor(private exerciseHandler: ExerciseHandlerService) {
   }
 
   ngOnInit(): void {
-    this.dataHandler.exerciseSubject.subscribe(value => this.exercises = value);
+    this.exerciseHandler.exerciseSubject.subscribe(value => this.exercises = value);
   }
 }
