@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Category} from '../../model/Category';
-import {CategoryHandlerService} from '../../service/category.handler.service';
-import {ExerciseHandlerService} from '../../service/exercise-handler.service';
+import {HttpService} from '../../service/http.service';
 
 @Component({
   selector: 'app-categories',
@@ -13,17 +12,15 @@ export class CategoriesComponent implements OnInit {
   categories: Category[];
   activeCategory: Category;
 
-  constructor(private categoryHandler: CategoryHandlerService,
-              private exerciseHandler: ExerciseHandlerService) {
+  constructor(private httpService: HttpService) {
   }
 
   ngOnInit() {
-    this.categoryHandler.getAllCategories()
-      .subscribe((value: Category[]) => this.categories = value);
+    this.httpService.categorySubject.subscribe(value => this.categories = value);
   }
 
   showExercisesByCategory(category: Category) {
     this.activeCategory = category;
-    this.exerciseHandler.getExercisesByCategory(category);
+    this.httpService.getExercisesByCategory(category);
   }
 }

@@ -1,0 +1,45 @@
+<h4>Enter exercise</h4>
+
+<mat-form-field appearance="fill">
+  <mat-label>Title</mat-label>
+  <label>
+    <input matInput [(ngModel)]="data.title"/>
+  </label>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Category</mat-label>
+  <mat-select [(ngModel)]="data.category">
+    <mat-option *ngFor="let category of data.categories" [value]="category">
+      {{category.title}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Amount</mat-label>
+  <label>
+    <input matInput [(ngModel)]="data.amount">
+  </label>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Measure</mat-label>
+  <mat-select [(ngModel)]="data.measure">
+    <mat-option *ngFor="let measure of data.measures" [value]="measure">
+      {{measure.title}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>Date</mat-label>
+  <label>
+    <input matInput [(ngModel)]="data.date">
+  </label>
+</mat-form-field>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

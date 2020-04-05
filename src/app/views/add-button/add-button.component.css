@@ -4,8 +4,14 @@
   font-size: 30px;
 }
 
-.hot-container p { margin-top: 10px; }
-a { text-decoration: none; margin: 0 10px; }
+.hot-container p {
+  margin-top: 10px;
+}
+
+button {
+  text-decoration: none;
+  margin: 0 10px;
+}
 
 .hot-container {
   min-height: 50px;
@@ -14,7 +20,7 @@ a { text-decoration: none; margin: 0 10px; }
   text-align: right;
 }
 
-a.btn {
+button.btn {
   display: inline-block;
   color: #666;
   background-color: #eee;
@@ -25,35 +31,35 @@ a.btn {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  border: 1px solid rgba(0,0,0,0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom-width: 3px;
 }
 
-a.btn:hover {
+button.btn:hover {
   background-color: #e3e3e3;
-  border-color: rgba(0,0,0,0.5);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
-a.btn:active {
+button.btn:active {
   background-color: #CCC;
-  border-color: rgba(0,0,0,0.9);
+  border-color: rgba(0, 0, 0, 0.9);
 }
 
 /* blue button */
 
-a.btn.btn-blue {
+button.btn.btn-blue {
   background-color: #699DB6;
-  border-color: rgba(0,0,0,0.3);
-  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  border-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
   color: #FFF;
 }
 
-a.btn.btn-blue:hover {
+button.btn.btn-blue:hover {
   background-color: #4F87A2;
-  border-color: rgba(0,0,0,0.5);
+  border-color: rgba(0, 0, 0, 0.5);
 }
 
-a.btn.btn-blue:active {
+button.btn.btn-blue:active {
   background-color: #3C677B;
-  border-color: rgba(0,0,0,0.9);
+  border-color: rgba(0, 0, 0, 0.9);
 }

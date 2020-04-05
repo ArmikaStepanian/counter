@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Exercise} from '../../model/Exercise';
-import {ExerciseHandlerService} from '../../service/exercise-handler.service';
+import {HttpService} from '../../service/http.service';
 
 @Component({
   selector: 'app-exercises',
@@ -11,10 +11,10 @@ export class ExercisesComponent implements OnInit {
 
   exercises: Exercise[];
 
-  constructor(private exerciseHandler: ExerciseHandlerService) {
+  constructor(private handlerService: HttpService) {
   }
 
   ngOnInit(): void {
-    this.exerciseHandler.exerciseSubject.subscribe(value => this.exercises = value);
+    this.handlerService.exerciseSubject.subscribe(value => this.exercises = value);
   }
 }
