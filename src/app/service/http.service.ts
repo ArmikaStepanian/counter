@@ -50,6 +50,5 @@ export class HttpService {
   addExercise(exercise: Exercise): void {
     this.http.post<Exercise[]>(this.addExerciseUrl, exercise)
       .forEach(value => this.exerciseSubject.next(value));
-    this.getAllExercises();
   }
 }

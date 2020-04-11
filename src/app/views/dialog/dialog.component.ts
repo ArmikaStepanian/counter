@@ -5,8 +5,7 @@ import {HttpService} from '../../service/http.service';
 
 @Component({
   selector: 'app-dialog',
-  templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.css']
+  templateUrl: './dialog.component.html'
 })
 export class DialogComponent implements OnInit {
 
@@ -25,6 +24,7 @@ export class DialogComponent implements OnInit {
       console.log('The dialog was closed');
       console.log(result);
       this.httpService.addExercise(result);
+      this.httpService.getAllExercises();
     });
   }
 

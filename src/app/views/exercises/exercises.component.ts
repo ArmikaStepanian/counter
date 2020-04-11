@@ -4,8 +4,7 @@ import {HttpService} from '../../service/http.service';
 
 @Component({
   selector: 'app-exercises',
-  templateUrl: './exercises.component.html',
-  styleUrls: ['./exercises.component.css']
+  templateUrl: './exercises.component.html'
 })
 export class ExercisesComponent implements OnInit {
 
