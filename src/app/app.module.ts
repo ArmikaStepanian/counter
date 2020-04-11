@@ -14,6 +14,9 @@ import {FormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {DatepickerComponent} from './views/dialog/datepicker/datepicker.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     CategoriesComponent,
     ExercisesComponent,
     AddButtonComponent,
-    DialogComponent
+    DialogComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [ ],
   bootstrap: [AppComponent]

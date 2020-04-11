@@ -32,12 +32,7 @@
   </mat-select>
 </mat-form-field>
 
-<mat-form-field appearance="fill">
-  <mat-label>Date</mat-label>
-  <label>
-    <input matInput [(ngModel)]="data.date">
-  </label>
-</mat-form-field>
+<app-datepicker></app-datepicker>
 
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
