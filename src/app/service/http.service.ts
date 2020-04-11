@@ -4,6 +4,7 @@ import {BehaviorSubject} from 'rxjs';
 import {Category} from '../model/Category';
 import {Measure} from '../model/Measure';
 import {Exercise} from '../model/Exercise';
+import {StatisticRequest} from '../model/StatisticRequest';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class HttpService {
   getAllExercisesUrl = 'http://localhost:8080/api/allExercises';
   getExercisesByCategoryUrl = 'http://localhost:8080/api/exercisesByCategory';
   addExerciseUrl = 'http://localhost:8080/api/addExercise';
+  statisticUrl = 'http://localhost:8080/api/stat';
 
   measureSubject = new BehaviorSubject<Measure[]>([]);
   categorySubject = new BehaviorSubject<Category[]>([]);
@@ -50,5 +52,10 @@ export class HttpService {
   addExercise(exercise: Exercise): void {
     this.http.post<Exercise[]>(this.addExerciseUrl, exercise)
       .forEach(value => this.exerciseSubject.next(value));
+  }
+
+  getStatistic(statisticRequest: StatisticRequest): void {
+    this.http.post<number>(this.statisticUrl, statisticRequest)
+      .forEach(value => console.log(value));
   }
 }

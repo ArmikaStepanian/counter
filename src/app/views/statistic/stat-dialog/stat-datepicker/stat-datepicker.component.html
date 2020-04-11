@@ -1,0 +1,17 @@
+<mat-form-field>
+  <mat-label>From</mat-label>
+  <label>
+    <input matInput [matDatepicker]="pickerFrom" [(ngModel)]="statData.from">
+  </label>
+  <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+  <mat-datepicker #pickerFrom></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>To</mat-label>
+  <label>
+    <input matInput [matDatepicker]="pickerTo" [(ngModel)]="statData.to">
+  </label>
+  <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+  <mat-datepicker #pickerTo></mat-datepicker>
+</mat-form-field>

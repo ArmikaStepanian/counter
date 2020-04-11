@@ -1,0 +1,13 @@
+<mat-form-field appearance="fill">
+  <mat-label>Exercise title</mat-label>
+  <label>
+    <input matInput [(ngModel)]="statData.title"/>
+  </label>
+</mat-form-field>
+
+<app-stat-datepicker></app-stat-datepicker>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="statData" cdkFocusInitial (click)="onYesClick()">Count</button>
+</div>

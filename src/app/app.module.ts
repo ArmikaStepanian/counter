@@ -17,6 +17,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {DatepickerComponent} from './views/dialog/datepicker/datepicker.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {StatComponent} from './views/statistic/stat.component';
+import {StatDialogComponent} from './views/statistic/stat-dialog/stat-dialog.component';
+import {StatDatepickerComponent} from './views/statistic/stat-dialog/stat-datepicker/stat-datepicker.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import {MatNativeDateModule} from '@angular/material/core';
     ExercisesComponent,
     AddButtonComponent,
     DialogComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    StatComponent,
+    StatDialogComponent,
+    StatDatepickerComponent
   ],
   imports: [
     BrowserModule,
