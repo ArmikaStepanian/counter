@@ -24,7 +24,6 @@ export class DialogComponent implements OnInit {
       console.log('The dialog was closed');
       console.log(result);
       this.httpService.addExercise(result);
-      this.httpService.getAllExercises();
     });
   }
 
