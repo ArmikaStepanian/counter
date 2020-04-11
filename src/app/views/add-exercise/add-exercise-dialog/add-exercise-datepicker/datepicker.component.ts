@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
-import {DialogData} from '../../add-button/add-button.component';
+import {DialogData} from '../../add-button.component';
 
 @Component({
   selector: 'app-datepicker',

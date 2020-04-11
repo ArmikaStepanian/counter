@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {DialogComponent} from '../dialog/dialog.component';
+import {DialogComponent} from './add-exercise-dialog/dialog.component';
 import {Category} from '../../model/Category';
 import {Measure} from '../../model/Measure';
 import {HttpService} from '../../service/http.service';
