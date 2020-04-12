@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {StatDialogComponent} from './stat-dialog/stat-dialog.component';
+import {StatService} from './stat.service';
+import {HttpService} from '../../service/http.service';
 
 export interface StatDialogData {
   title: string;
@@ -19,7 +21,9 @@ export class StatComponent implements OnInit {
   from: Date;
   to: Date;
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog,
+              public statService: StatService,
+              public httpService: HttpService) {
   }
 
   openDialog(): void {

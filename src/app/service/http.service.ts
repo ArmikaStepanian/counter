@@ -22,6 +22,7 @@ export class HttpService {
   measureSubject = new BehaviorSubject<Measure[]>([]);
   categorySubject = new BehaviorSubject<Category[]>([]);
   exerciseSubject = new BehaviorSubject<Exercise[]>([]);
+  reps: number;
 
   constructor(private http: HttpClient) {
     this.getAllCategories();
@@ -51,13 +52,13 @@ export class HttpService {
 
   addExercise(exercise: Exercise): void {
     this.http.post<Exercise[]>(this.addExerciseUrl, exercise)
-      .forEach(value => this.exerciseSubject.next(value));
+      .subscribe(value => this.exerciseSubject.next(value));
     this.getAllExercises();
   }
 
   getStatistic(statisticRequest: StatisticRequest): void {
     this.http.post<number>(this.statisticUrl, statisticRequest)
-      .forEach(value => console.log(value));
+      .subscribe(value => this.reps = value);
     this.getAllExercises();
   }
 }

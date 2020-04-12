@@ -3,3 +3,15 @@
     <div class="ripple-container"></div>
   </button>
 </div>
+
+<p class="text-muted text-center" [class.invisible]=!httpService.reps>
+  For period from {{statService.statDialogData ? (statService.statDialogData.from | date:'dd MMMM yyyy') : ''}}
+  to {{statService.statDialogData ? (statService.statDialogData.to| date:'dd MMMM yyyy') : ''}}
+  you have done
+</p>
+<h1 class="text-primary text-center" [class.invisible]=!httpService.reps>
+  {{httpService.reps}}
+</h1>
+<p class="text-muted text-center" [class.invisible]=!httpService.reps>
+  {{statService.statDialogData ? statService.statDialogData.title : ''}}
+</p>
