@@ -18,9 +18,9 @@
       <tr *ngFor="let exercise of exercises; let i = index">
         <td>{{i + 1}}</td>
         <td>{{exercise.title}}</td>
-        <td>{{exercise.category.title}}</td>
+        <td>{{exercise.category ? exercise.category.title : '-'}}</td>
         <td>{{exercise.amount}}</td>
-        <td>{{exercise.measure.title}}</td>
+        <td>{{exercise.measure ? exercise.measure.title : '-'}}</td>
         <td>{{exercise.date | date :'mediumDate'}}</td>
       </tr>
       </tbody>

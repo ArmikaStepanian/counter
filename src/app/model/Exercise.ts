@@ -4,12 +4,12 @@ import {Category} from './Category';
 export class Exercise {
   id: number;
   title: string;
-  category: Category;
   amount: number;
-  measure: Measure;
   date: Date;
+  category?: Category;
+  measure?: Measure;
 
-  constructor(id: number, title: string, category: Category, amount: number, measure: Measure, date: Date) {
+  constructor(id: number, title: string, amount: number, date: Date, category?: Category, measure?: Measure) {
     this.id = id;
     this.title = title;
     this.category = category;
