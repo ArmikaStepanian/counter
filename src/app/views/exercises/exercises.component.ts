@@ -10,10 +10,10 @@ export class ExercisesComponent implements OnInit {
 
   exercises: Exercise[];
 
-  constructor(private handlerService: HttpService) {
+  constructor(private httpService: HttpService) {
   }
 
   ngOnInit(): void {
-    this.handlerService.exerciseSubject.subscribe(value => this.exercises = value);
+    this.httpService.exerciseSubject.subscribe(value => this.exercises = value);
   }
 }
