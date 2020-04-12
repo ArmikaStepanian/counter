@@ -23,4 +23,9 @@ export class CategoriesComponent implements OnInit {
     this.activeCategory = category;
     this.httpService.getExercisesByCategory(category);
   }
+
+  showAllExercises() {
+    this.activeCategory = null;
+    this.httpService.getAllExercises();
+  }
 }

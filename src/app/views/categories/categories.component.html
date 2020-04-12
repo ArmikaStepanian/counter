@@ -9,6 +9,11 @@
   </h3></div>
   <div class="sidebar-wrapper">
     <ul class="nav">
+      <li class="nav-item pointer" (click)="showAllExercises()" [class.active]="activeCategory === null">
+        <a class="nav-link">
+          <p>All exercises</p>
+        </a>
+      </li>
       <li class="nav-item pointer"
           *ngFor="let category of categories" (click)="showExercisesByCategory(category)"
           [class.active]="activeCategory === category">
